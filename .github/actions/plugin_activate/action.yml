@@ -1,0 +1,9 @@
+name: 'ServiceNow CI/CD Add a plugin'
+description: 'Activate a desired plugin on your ServiceNow instance'
+inputs:
+  pluginID:
+    description: "Plugin ID to be installed"
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
