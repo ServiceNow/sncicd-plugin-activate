@@ -26,14 +26,13 @@ describe(`App lib`, () => {
     })
     describe(`builds request url`, () => {
         it(`with correct params`, () => {
-
             const pluginID: string = inputs.pluginID
             const app = new App(props)
 
             expect(app.buildRequestUrl(inputs.pluginID)).toEqual(
                 `https://${props.snowInstallInstance}.service-now.com/api/sn_cicd/plugin/${encodeURIComponent(
                     pluginID,
-                )}/activate`
+                )}/activate`,
             )
         })
         it(`without instance parameter`, () => {
@@ -44,7 +43,7 @@ describe(`App lib`, () => {
             expect(() => app.buildRequestUrl(pluginID)).toThrow(Errors.INCORRECT_CONFIG)
         })
         it(`without pluginID parameter`, () => {
-            const pluginID: string = ''
+            const pluginID = ''
             const app = new App(props)
 
             expect(() => app.buildRequestUrl(pluginID)).toThrow(Errors.INCORRECT_CONFIG)

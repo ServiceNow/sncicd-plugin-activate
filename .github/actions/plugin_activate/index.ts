@@ -8,11 +8,7 @@ export const configMsg = '. Configure Github secrets please'
 export const run = (): void => {
     try {
         const errors: string[] = []
-        const {
-            snowUsername = '',
-            snowPassword = '',
-            snowInstallInstance = '',
-        } = process.env
+        const { snowUsername = '', snowPassword = '', snowInstallInstance = '' } = process.env
 
         if (!snowUsername) {
             errors.push(Errors.USERNAME)
