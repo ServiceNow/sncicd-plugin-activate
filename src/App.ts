@@ -120,6 +120,10 @@ export default class App {
             // Call itself if the request in the running or pending state
             await this.printStatus(response.data.result)
         } else {
+
+            // for testing only!
+            if (process.env.fail === 'true') throw new Error('Triggered step fail')
+
             // Log the success result, the step of the pipeline is success as well
             if (+result.status === ResponseStatus.Successful) {
                 console.log(result.status_message)
