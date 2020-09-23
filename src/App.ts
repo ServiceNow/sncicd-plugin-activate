@@ -33,7 +33,10 @@ export default class App {
             password: props.password,
         }
         this.config = {
-            headers: { Accept: 'application/json' },
+            headers: {
+                'User-Agent': 'sncicd_extint_github',
+                Accept: 'application/json',
+            },
             auth: this.user,
         }
     }
