@@ -122,12 +122,17 @@ export default class App {
         } else {
 
             // for testing only!
-            if (process.env.fail === 'true') throw new Error('Triggered step fail')
+            if (process.env.fail === 'true') {
+                core.setOutput('failed', 'true')
+                throw new Error('Triggered step fail')
+            }
 
             // Log the success result, the step of the pipeline is success as well
             if (+result.status === ResponseStatus.Successful) {
                 console.log(result.status_message)
                 console.log(result.status_detail)
+            }else {
+                core.setOutput('failed', 'true')
             }
 
             // Log the failed result, the step throw an error to fail the step

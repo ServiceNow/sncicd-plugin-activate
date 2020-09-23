@@ -4,6 +4,9 @@ inputs:
   pluginID:
     description: "Plugin ID to be installed"
     required: true
+outputs:
+  failed:
+    description: "Install failed"
 runs:
   using: 'node12'
   main: 'index.js'
