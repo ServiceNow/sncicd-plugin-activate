@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vvoloshchuk/plugin_activate.git"
+    "url": "git+https://github.com/ServiceNow/sncicd_plugin_activate.git"
   },
   "author": "SoftServe inc.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vvoloshchuk/plugin_activate/issues"
+    "url": "https://github.com/ServiceNow/sncicd_plugin_activate/issues"
   },
-  "homepage": "https://github.com/vvoloshchuk/plugin_activate#readme",
+  "homepage": "https://github.com/ServiceNow/sncicd_plugin_activate#readme",
   "devDependencies": {
     "@types/jest": "^26.0.12",
     "@types/node": "^14.6.2",
