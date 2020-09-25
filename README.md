@@ -37,7 +37,7 @@ Create secrets called
 ```yaml
 - name: Activate Plugin 
   id: activate_plugin # id of the step
-  uses: <url to the repository with action> # like username/repo-name
+  uses: ServiceNow/sncicd_plugin_activate@1.0 # like username/repo-name
   with:
     pluginID: 
   env:
