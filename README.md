@@ -24,7 +24,7 @@ Activate a desired plugin on your ServiceNow instance
 
 # Usage
 ## Step 1: Collect the data from ServiceNow
-Collect all required data from the ServiceNow - username, password, instance, application sys_id or scope
+Collect all required data from the ServiceNow - username, password, instance
 ## Step 2: Configure Secrets in your GitHub repository
 On GitHub, go in your repository settings, click on the secret _Secrets_ and create a new secret.
 
@@ -32,7 +32,6 @@ Create secrets called
 - `SNOW_USERNAME`
 - `SNOW_PASSWORD`
 - `SNOW_INSTALL_INSTANCE` **domain** only required from the url like https://**domain**.service-now.com
-- `APP_SYS_ID` or `APP_SCOPE`
 
 ## Step 3: Configure the GitHub action
 ```yaml
@@ -45,8 +44,6 @@ Create secrets called
     snowUsername: ${{ secrets.SNOW_USERNAME }}
     snowPassword: ${{ secrets.SNOW_PASSWORD }}
     snowInstallInstance: ${{ secrets.SNOW_INSTALL_INSTANCE }}
-    appSysID: ${{ secrets.APP_SYS_ID }}
-    appScope: ${{ secrets.APP_SCOPE }}
 ```
 Inputs:
 - **pluginID** - Plugin ID to be installed (like com.servicenow_now_calendar)
@@ -58,8 +55,6 @@ Environment variable should be set up in the Step 1
 - snowUsername - Username to ServiceNow instance
 - snowPassword - Password to ServiceNow instance
 - snowInstallInstance - ServiceNow instance where plugin will be activated
-- appSysID - Required if app_scope is not specified. The sys_id of the application
-- appScope - Required if app_sys_id is not specified. The scope name of the application such as x_aah_custom_app
 
 ## Tests
 
