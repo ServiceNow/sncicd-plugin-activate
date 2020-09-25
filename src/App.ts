@@ -120,7 +120,6 @@ export default class App {
             // Call itself if the request in the running or pending state
             await this.printStatus(response.data.result)
         } else {
-
             // for testing only!
             if (process.env.fail === 'true') {
                 core.setOutput('failed', 'true')
@@ -131,7 +130,7 @@ export default class App {
             if (+result.status === ResponseStatus.Successful) {
                 console.log(result.status_message)
                 console.log(result.status_detail)
-            }else {
+            } else {
                 core.setOutput('failed', 'true')
             }
 
