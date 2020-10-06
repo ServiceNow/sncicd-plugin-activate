@@ -1,4 +1,4 @@
-# ServiceNow Activate Plugin
+# ServiceNow CI/CD GitHub Action for Activate Plugin
 
 Activate a desired plugin on your ServiceNow instance
 
