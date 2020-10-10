@@ -16,7 +16,7 @@ Create secrets called
 ## Step 3: Configure the GitHub action
 ```yaml
 - name: Activate Plugin 
-  id: activate_plugin # id of the step
+  id: sncicd-plugin-activate # id of the step
   uses: ServiceNow/sncicd-plugin-activate@1.0 # like username/repo-name
   with:
     pluginID: 
