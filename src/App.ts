@@ -47,16 +47,16 @@ export default class App {
      * @returns string  Url to API
      */
     buildRequestUrl(plugin_id: string): string {
-        if (!this.props.snowInstallInstance || !plugin_id) throw new Error(Errors.INCORRECT_CONFIG)
+        if (!this.props.nowInstallInstance || !plugin_id) throw new Error(Errors.INCORRECT_CONFIG)
 
-        return `https://${this.props.snowInstallInstance}.service-now.com/api/sn_cicd/plugin/${encodeURIComponent(
+        return `https://${this.props.nowInstallInstance}.service-now.com/api/sn_cicd/plugin/${encodeURIComponent(
             plugin_id,
         )}/activate`
     }
 
     /**
      * Get plugin id
-     * Makes the request to SNow api plugin/{plugin_id}/activate
+     * Makes the request to ServiceNow api plugin/{plugin_id}/activate
      * Prints the progress
      * @returns         Promise void
      */
