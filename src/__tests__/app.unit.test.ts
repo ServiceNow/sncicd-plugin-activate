@@ -22,7 +22,7 @@ describe(`App lib`, () => {
     })
 
     beforeEach(() => {
-        props = { password: 'test', snowInstallInstance: 'test', username: 'test' }
+        props = { password: 'test', nowInstallInstance: 'test', username: 'test' }
     })
     describe(`builds request url`, () => {
         it(`with correct params`, () => {
@@ -30,13 +30,13 @@ describe(`App lib`, () => {
             const app = new App(props)
 
             expect(app.buildRequestUrl(inputs.pluginID)).toEqual(
-                `https://${props.snowInstallInstance}.service-now.com/api/sn_cicd/plugin/${encodeURIComponent(
+                `https://${props.nowInstallInstance}.service-now.com/api/sn_cicd/plugin/${encodeURIComponent(
                     pluginID,
                 )}/activate`,
             )
         })
         it(`without instance parameter`, () => {
-            props.snowInstallInstance = ''
+            props.nowInstallInstance = ''
             const pluginID: string = inputs.pluginID
             const app = new App(props)
 
@@ -85,7 +85,7 @@ describe(`App lib`, () => {
                 Accept: 'application/json',
             },
         }
-        const url = `https://${props.snowInstallInstance}.service-now.com/api/sn_cicd/plugin/${encodeURIComponent(
+        const url = `https://${props.nowInstallInstance}.service-now.com/api/sn_cicd/plugin/${encodeURIComponent(
             inputs.pluginID,
         )}/activate`
 
